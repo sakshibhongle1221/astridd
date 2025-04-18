@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAME</title>
+  <style>
+    body{
+      background-color:lightblue;
+      color: black;
+    }
+
+    .title{
+      font-size: 30px;
+      font-weight :bold;
+    }
+
+    .move-icon{
+      height: 50px;
+    }
+
+    .shape-button{
+      background: black;
+      border: 5px solid white;
+      width: 120px;
+      height: 120px;
+      border-radius: 60px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .result{
+      font-size: 25px;
+      font-weight: bold;
+      margin-top: 50px;
+    }
+  
+  </style> 
+</head>
+
+<body>
+  <p class="title">HEY!!
+    welcome to the rock paper scissors shoot game</p>
+  <button onclick="
+  playgame('ROCK');
+  " class="shape-button"
+  ><img src = "image.jpeg" class ="move-icon" ></button>
+
+  <button onclick="
+  playgame('PAPER');
+  " class="shape-button
+  "><img src="image.jpeg" class="move-icon" ></button>
+
+  <button onclick="
+  playgame('SCISSORS');
+  " class="shape-button
+  "><img src="image.jpeg" class="move-icon"></button>
+
+
+  <p class="js-result result">Tap To Play</p>
+  <p class="js-moves"></p>
+  <p class="js-score"></p>
+
+  <button onclick="
+  score.wins = 0;
+  score.losses = 0;
+  score.ties = 0;
+  localStorage.removeItem('score');
+  updateScoreElement();
+  "> RESET SCORE </button>
+
+  <script
+   src="game.js"
+   ></script>
+</body>
+
+</html>
